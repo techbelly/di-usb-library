@@ -58,7 +58,6 @@ class InfinityComms(threading.Thread):
         result = Deferred()
         self.pending_requests[message_id] = result
         hidapi.hid_write(self.device, message)
-        print ">>"+":".join("{:02x}".format(ord(c)) for c in message)
         return Promise(result)
 
     def construct_message(self, command, data):
