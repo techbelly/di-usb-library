@@ -1,0 +1,1 @@
+from infinity import InfinityBase
