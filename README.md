@@ -11,10 +11,12 @@ from infinity import InfinityBase
 
 base = InfinityBase()
 
+# this will be run whenever a figure or disk is added/removed
 base.onTagsChanged = lambda: print("Tags added or removed.")
 
 base.connect()
 
+# get all the figures and disks on the base 
 base.getAllTags(print)
 
 base.setColor(1, 200, 0, 0)
